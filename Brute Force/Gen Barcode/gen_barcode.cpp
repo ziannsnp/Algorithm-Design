@@ -22,11 +22,7 @@ void combi_exact(int n,
     else
     {
         for (int i = 0; i < n; i++)
-            if (sol[i] == 1){
-                cout << 1 ;
-            } else {
-                cout << 0 ;
-            }
+            cout << sol[i];
                 
         cout << endl;
     }
@@ -36,5 +32,6 @@ int main()
 {
     int a, b;
     cin >> a >> b;
-    return 0;
+    vector<int> sol(b,0);
+    combi_exact(b, sol, 0, a, 0);
 }
